@@ -6,7 +6,7 @@ const { db } = require("../libs/firebase");
 
 router.post("/register", async function(req, res) {
   const { firstName = "", lastName = "", email, password } = req.body;
-  console.log(firstName, lastName, email, password);
+
   if (!email || !password) {
     return res.status(400).json({
       msg: "There was a problem registering the user."

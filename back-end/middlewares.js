@@ -8,7 +8,7 @@ module.exports = {
     verifyJWTToken(token)
       .then(decodedToken => {
         req.user = decodedToken.data;
-        // console.log(req.user);
+
         next();
       })
       .catch(err => {
